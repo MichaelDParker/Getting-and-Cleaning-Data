@@ -1,0 +1,69 @@
+---
+title: "CodeBook"
+author: "MichaelDParker"
+date: "December 19, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Variables
+
+##This document describes the Getting and Cleaning Data Project data.
+
+The combined_data_file.txt combines the test and training data found on the project site for the wearables project.
+The x and y files were joined using the row index. This enabled me to assign an activity with an activity code in the original data.
+The subject number was also added to the datasetusing the row index of the subject table. To ensure that the processing of the files did not affect the row order, an index number was added to each file beofre processing began.
+
+It was also important to ensure that each file  (test and train) had hte same number of rows before merging the data.
+
+These are the names of the vaiables in the combined files:
+```{}
+ [1] "ID"                              "tBodyAcc-mean()-X"               "tBodyAcc-mean()-Y"               "tBodyAcc-mean()-Z"              
+ [5] "tBodyAcc-std()-X"                "tBodyAcc-std()-Y"                "tBodyAcc-std()-Z"                "tGravityAcc-mean()-X"           
+ [9] "tGravityAcc-mean()-Y"            "tGravityAcc-mean()-Z"            "tGravityAcc-std()-X"             "tGravityAcc-std()-Y"            
+[13] "tGravityAcc-std()-Z"             "tBodyAccJerk-mean()-X"           "tBodyAccJerk-mean()-Y"           "tBodyAccJerk-mean()-Z"          
+[17] "tBodyAccJerk-std()-X"            "tBodyAccJerk-std()-Y"            "tBodyAccJerk-std()-Z"            "tBodyGyro-mean()-X"             
+[21] "tBodyGyro-mean()-Y"              "tBodyGyro-mean()-Z"              "tBodyGyro-std()-X"               "tBodyGyro-std()-Y"              
+[25] "tBodyGyro-std()-Z"               "tBodyGyroJerk-mean()-X"          "tBodyGyroJerk-mean()-Y"          "tBodyGyroJerk-mean()-Z"         
+[29] "tBodyGyroJerk-std()-X"           "tBodyGyroJerk-std()-Y"           "tBodyGyroJerk-std()-Z"           "tBodyAccMag-mean()"             
+[33] "tBodyAccMag-std()"               "tGravityAccMag-mean()"           "tGravityAccMag-std()"            "tBodyAccJerkMag-mean()"         
+[37] "tBodyAccJerkMag-std()"           "tBodyGyroMag-mean()"             "tBodyGyroMag-std()"              "tBodyGyroJerkMag-mean()"        
+[41] "tBodyGyroJerkMag-std()"          "fBodyAcc-mean()-X"               "fBodyAcc-mean()-Y"               "fBodyAcc-mean()-Z"              
+[45] "fBodyAcc-std()-X"                "fBodyAcc-std()-Y"                "fBodyAcc-std()-Z"                "fBodyAcc-meanFreq()-X"          
+[49] "fBodyAcc-meanFreq()-Y"           "fBodyAcc-meanFreq()-Z"           "fBodyAccJerk-mean()-X"           "fBodyAccJerk-mean()-Y"          
+[53] "fBodyAccJerk-mean()-Z"           "fBodyAccJerk-std()-X"            "fBodyAccJerk-std()-Y"            "fBodyAccJerk-std()-Z"           
+[57] "fBodyAccJerk-meanFreq()-X"       "fBodyAccJerk-meanFreq()-Y"       "fBodyAccJerk-meanFreq()-Z"       "fBodyGyro-mean()-X"             
+[61] "fBodyGyro-mean()-Y"              "fBodyGyro-mean()-Z"              "fBodyGyro-std()-X"               "fBodyGyro-std()-Y"              
+[65] "fBodyGyro-std()-Z"               "fBodyGyro-meanFreq()-X"          "fBodyGyro-meanFreq()-Y"          "fBodyGyro-meanFreq()-Z"         
+[69] "fBodyAccMag-mean()"              "fBodyAccMag-std()"               "fBodyAccMag-meanFreq()"          "fBodyBodyAccJerkMag-mean()"     
+[73] "fBodyBodyAccJerkMag-std()"       "fBodyBodyAccJerkMag-meanFreq()"  "fBodyBodyGyroMag-mean()"         "fBodyBodyGyroMag-std()"         
+[77] "fBodyBodyGyroMag-meanFreq()"     "fBodyBodyGyroJerkMag-mean()"     "fBodyBodyGyroJerkMag-std()"      "fBodyBodyGyroJerkMag-meanFreq()"
+[81] "activitycode"                    "activityname"                    "subjectid"
+```
+
+#The key fields  
+        ID is the original row index that was used to match the various files.  
+        Activity Code is the number of the activity. There are no units, it is merely serving as a factor.  
+        Activity Name is the descriptive name of the activity.  
+        Subject ID is the number assigned to the tester to protect their identity.  
+        Variables 2 ~80 are the mean of the measurements for the stated variable by activity and stest subject.  
+
+
+
+# Data
+
+For a description of the original data gathered refer to the README file of the original data set. It can be seen in the file named OrigianlReadMe.txt.
+
+The combined data will be found in the file combined_data_file.txt. It is the combination of the X measurement data, the Y activity data and the subject identity for each measurement.
+
+The summarized result will be found in  the summary_data_file.txt
+
+
+
+#Transformations
+
+For the step by step instruction on how the data was transformed, refer to the ReadMeInstructions file.
+

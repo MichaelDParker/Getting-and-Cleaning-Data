@@ -1,5 +1,5 @@
 ---
-title: "Summary Data Explanation"
+title: "Data Transformation Explanation"
 author: "MichaelDParker"
 date: "December 17, 2017"
 output: html_document
@@ -72,6 +72,7 @@ allnames<- names(xdatanamed)
    #rename subject
    names(xyscombined)[83]<- "subjectid"
    names(xyscombined)
+   write.table(xyscombined, file = "combined_data_file.txt", row.names = FALSE)
 ```
  
 # From the data set in the previous step, we can now analyze our data. The resulting data set shows the average of each variable for each activity by each subject.
