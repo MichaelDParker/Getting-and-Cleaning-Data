@@ -1,0 +1,87 @@
+This file explains the values in the summary table
+
+Read the file "features_info for more inforamtion about the various measurements.
+
+"activityname" These are the names of the activities being conducted by the subject.
+"subjectid" This is the unique ID of the person doing the activity. It is coded to protect their privacy. 
+"ID" The ID is a numerical index used to align the various data files that make up the base data.
+"tBodyAcc-mean()-X" Read the file "features_info for more inforamtion about the various measurements.
+"tBodyAcc-mean()-Y" Read the file "features_info for more inforamtion 
+"tBodyAcc-mean()-Z" Read the file "features_info for more inforamtion 
+"tBodyAcc-std()-X" Read the file "features_info for more inforamtion 
+"tBodyAcc-std()-Y" Read the file "features_info for more inforamtion 
+"tBodyAcc-std()-Z" Read the file "features_info for more inforamtion 
+"tGravityAcc-mean()-X" Read the file "features_info for more inforamtion 
+"tGravityAcc-mean()-Y" Read the file "features_info for more inforamtion 
+"tGravityAcc-mean()-Z" Read the file "features_info for more inforamtion 
+"tGravityAcc-std()-X" Read the file "features_info for more inforamtion 
+"tGravityAcc-std()-Y" Read the file "features_info for more inforamtion 
+"tGravityAcc-std()-Z" Read the file "features_info for more inforamtion 
+"tBodyAccJerk-mean()-X" Read the file "features_info for more inforamtion 
+"tBodyAccJerk-mean()-Y" Read the file "features_info for more inforamtion 
+"tBodyAccJerk-mean()-Z" Read the file "features_info for more inforamtion 
+"tBodyAccJerk-std()-X" Read the file "features_info for more inforamtion 
+"tBodyAccJerk-std()-Y" Read the file "features_info for more inforamtion 
+"tBodyAccJerk-std()-Z" Read the file "features_info for more inforamtion 
+"tBodyGyro-mean()-X" Read the file "features_info for more inforamtion 
+"tBodyGyro-mean()-Y" Read the file "features_info for more inforamtion 
+"tBodyGyro-mean()-Z" Read the file "features_info for more inforamtion 
+"tBodyGyro-std()-X" Read the file "features_info for more inforamtion 
+"tBodyGyro-std()-Y" Read the file "features_info for more inforamtion 
+"tBodyGyro-std()-Z" Read the file "features_info for more inforamtion 
+"tBodyGyroJerk-mean()-X" Read the file "features_info for more inforamtion 
+"tBodyGyroJerk-mean()-Y" Read the file "features_info for more inforamtion 
+"tBodyGyroJerk-mean()-Z" Read the file "features_info for more inforamtion 
+"tBodyGyroJerk-std()-X" Read the file "features_info for more inforamtion 
+"tBodyGyroJerk-std()-Y" Read the file "features_info for more inforamtion 
+"tBodyGyroJerk-std()-Z" Read the file "features_info for more inforamtion 
+"tBodyAccMag-mean()" Read the file "features_info for more inforamtion 
+"tBodyAccMag-std()" Read the file "features_info for more inforamtion 
+"tGravityAccMag-mean()" Read the file "features_info for more inforamtion 
+"tGravityAccMag-std()" Read the file "features_info for more inforamtion 
+"tBodyAccJerkMag-mean()" Read the file "features_info for more inforamtion 
+"tBodyAccJerkMag-std()" Read the file "features_info for more inforamtion 
+"tBodyGyroMag-mean()" Read the file "features_info for more inforamtion 
+"tBodyGyroMag-std()" Read the file "features_info for more inforamtion 
+"tBodyGyroJerkMag-mean()" Read the file "features_info for more inforamtion 
+"tBodyGyroJerkMag-std()" Read the file "features_info for more inforamtion 
+"fBodyAcc-mean()-X" Read the file "features_info for more inforamtion 
+"fBodyAcc-mean()-Y" Read the file "features_info for more inforamtion 
+"fBodyAcc-mean()-Z" Read the file "features_info for more inforamtion 
+"fBodyAcc-std()-X" Read the file "features_info for more inforamtion 
+"fBodyAcc-std()-Y" Read the file "features_info for more inforamtion 
+"fBodyAcc-std()-Z" Read the file "features_info for more inforamtion 
+"fBodyAcc-meanFreq()-X" Read the file "features_info for more inforamtion 
+"fBodyAcc-meanFreq()-Y" Read the file "features_info for more inforamtion 
+"fBodyAcc-meanFreq()-Z" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-mean()-X" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-mean()-Y" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-mean()-Z" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-std()-X" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-std()-Y" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-std()-Z" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-meanFreq()-X" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-meanFreq()-Y" Read the file "features_info for more inforamtion 
+"fBodyAccJerk-meanFreq()-Z" Read the file "features_info for more inforamtion 
+"fBodyGyro-mean()-X" Read the file "features_info for more inforamtion 
+"fBodyGyro-mean()-Y" Read the file "features_info for more inforamtion 
+"fBodyGyro-mean()-Z" Read the file "features_info for more inforamtion 
+"fBodyGyro-std()-X" Read the file "features_info for more inforamtion 
+"fBodyGyro-std()-Y" Read the file "features_info for more inforamtion 
+"fBodyGyro-std()-Z" Read the file "features_info for more inforamtion 
+"fBodyGyro-meanFreq()-X" Read the file "features_info for more inforamtion 
+"fBodyGyro-meanFreq()-Y" Read the file "features_info for more inforamtion 
+"fBodyGyro-meanFreq()-Z" Read the file "features_info for more inforamtion 
+"fBodyAccMag-mean()" Read the file "features_info for more inforamtion 
+"fBodyAccMag-std()" Read the file "features_info for more inforamtion 
+"fBodyAccMag-meanFreq()" Read the file "features_info for more inforamtion 
+"fBodyBodyAccJerkMag-mean()" Read the file "features_info for more inforamtion 
+"fBodyBodyAccJerkMag-std()" Read the file "features_info for more inforamtion 
+"fBodyBodyAccJerkMag-meanFreq()" Read the file "features_info for more inforamtion 
+"fBodyBodyGyroMag-mean()" Read the file "features_info for more inforamtion 
+"fBodyBodyGyroMag-std()" Read the file "features_info for more inforamtion 
+"fBodyBodyGyroMag-meanFreq()" Read the file "features_info for more inforamtion 
+"fBodyBodyGyroJerkMag-mean()" Read the file "features_info for more inforamtion 
+"fBodyBodyGyroJerkMag-std()" Read the file "features_info for more inforamtion 
+"fBodyBodyGyroJerkMag-meanFreq()" Read the file "features_info for more inforamtion 
+"activitycode" This is the code number for the activity name. There is a one to one relationship between the activity names and the activity codes.

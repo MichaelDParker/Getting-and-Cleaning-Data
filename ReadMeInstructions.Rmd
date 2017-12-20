@@ -1,0 +1,87 @@
+---
+title: "Summary Data Explanation"
+author: "MichaelDParker"
+date: "December 17, 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Merges the training and the test sets to create one data set.
+        # The path to the data on my PC is : C:\Users\mparker1\Documents\BusinessAnalyticsTeam\Coursera\R Files\GetandCleanData\UCI HAR Dataset
+        # Set up the path to the data
+```{}
+setwd("C:/Users/mparker1/Documents/BusinessAnalyticsTeam/Coursera/R Files/GetandCleanData/UCI HAR Dataset")
+```
+   #First had to read in the data files
+```{}
+   xtest <- read.table("test/X_test.txt")
+   xtrain<- read.table("train/X_train.txt")
+   ytest <- read.table("test/Y_test.txt")
+   ytrain<- read.table("train/Y_train.txt")
+   subjecttest<-read.table("test/subject_test.txt")
+   subjecttrain<-read.table("train/subject_train.txt")
+```
+   #Next verified that the training and test data columns match before merging any data
+```{}
+   all.equal(names(xtrain), names(xtest))
+   all.equal(names(ytrain), names(ytest))
+   all.equal(names(subjecttrain), names(subjecttest))
+```   
+   #After merging the data I had to add an idex so the data rows could be matched later if the R functions changed the row order of the data. 
+```{}   
+   new_x_data<- rbind(xtrain, xtest)
+   new_x_data$ID<- seq.int(nrow(new_x_data))
+   new_y_data<- rbind(ytrain, ytest)
+   new_y_data$ID<- seq.int(nrow(new_y_data))
+   new_subject_data<- rbind(subjecttrain, subjecttest)
+   new_subject_data$ID<- seq.int(nrow(new_subject_data))
+```
+# Next I updated the labels to be meaningfuland descriptive activity names within the data set
+   #Put the feature name as a column heading
+   #This was sourced from the features file,which contians the 561 column names
+
+```{}
+   features <- read.table("features.txt", stringsAsFactors = FALSE)
+   features <- rbind(features,"ID")```
+   #Next copying the dataset and adding names to columns
+   xdatanamed<- new_x_data
+   names(xdatanamed)<- features$V2
+```
+   #add activities column from Y table to the x table so we can use the activity labels when we finish
+```{}
+   activities<-read.table("activity_labels.txt")
+   names(activities)<-c("activitycode","activityname")
+   names(new_y_data)<-c("activitycode","ID")
+   #add the activity name from Y file code to the x measurement file
+   allydata<- merge(new_y_data,activities,sort=F)
+```
+# Extracts only the measurements on the mean and standard deviation for each measurement.
+   #if this data is not limited, the merge will fail due to the size of the data.
+   
+```{}
+allnames<- names(xdatanamed) 
+   cnms<- grep("mean|std|ID", allnames)
+   s<-xdatanamed[,cnms]
+   #Combine the x and y data
+   x_y_combined<- merge(s, allydata, by.x="ID", by.y="ID")
+   #combine the xy with subject
+   xyscombined<- merge(x_y_combined,new_subject_data, by="ID")
+   #rename subject
+   names(xyscombined)[83]<- "subjectid"
+   names(xyscombined)
+```
+ 
+# From the data set in the previous step, we can now analyze our data. The resulting data set shows the average of each variable for each activity by each subject.
+   # The result is in the Summarydata file.
+```{}
+    r1<-aggregate(.~activityname+subjectid,data=xyscombined ,FUN=mean)
+    # save a data frame to local drive
+    write.table(r1, file = "summary_data_file.txt", row.names = FALSE)
+   
+    print(r1)
+    write.table(names(r1), file="codebook_data_list.txt", row.names=F)
+    write.table(unique(r1$activityname),file="activity_names.txt", row.names=F)
+```   
